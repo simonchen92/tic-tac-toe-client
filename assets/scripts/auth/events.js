@@ -1,15 +1,7 @@
 'use strict'
-const getFormFields = require('../../lib/get-form-fields.js')
+const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
-
-// JAVASCRIPT CODES FROM THIS POINT ON!!!!
-// const gameBoard = ['', '', '', '', '', '', '', '', '']
-// const player1 = ''
-// const player2 = ''
-// END OF JAVASCRIPT CODES
-
-// ***** LOGIN EVENT STUFF!!!!! *****
 
 const onSignUp = (event) => {
   event.preventDefault()
@@ -50,30 +42,10 @@ const onSignOut = (event) => {
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
-// ****** END OF EVENT LOGIN CODES ******
-
-// Game Board STUFF!!!!
-
-// const createClicks = function (click) {
-//   console.log('YOU MADE A CLICK')
-//   if (click) {
-//     document.getElementById('board').html = 'X'
-//   } else {
-//     document.getElementById('board').html = 'O'
-//   }
-//   return click
-// }
-
-//   event.preventDefault()
-//   const form = event.target
-//   const formData = getFormFields(form)
-//   console.log(formData)
-// }
 
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut
-  // createClicks
 }

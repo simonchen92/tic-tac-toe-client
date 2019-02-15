@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Tic Tac Toe Game</title>
+  <title>Simon's Tic Tac Toe Game</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -28,7 +28,7 @@
   <label>Password</label>
   <input name="credentials[password]" type="password" placeholder="Password">
   <label>Password Confirmation</label>
-  <input name="credentials[password_confirmation]" type="password" placeholder="Password Confirmation">
+  <input name="credentials[password_confirmation]" type="password" placeholder="Password Confirm">
   <input id="button" type="submit" value="Sign Up">
 </form>
 
@@ -72,28 +72,29 @@
 
 <!-- Tic Tac Toe Grid Layout -->
 
-<section id="board">
+
 <div class="container">
+  <div id="board">
   <h1>Tic Tac Toe</h1>
   <div class="row">
+    <div id="0" class="col-4 col-sm-4 col-md-4 col-lg-4 box"> </div>
     <div id="1" class="col-4 col-sm-4 col-md-4 col-lg-4 box"> </div>
     <div id="2" class="col-4 col-sm-4 col-md-4 col-lg-4 box"> </div>
-    <div id="3" class="col-4 col-sm-4 col-md-4 col-lg-4 box"> </div>
   </div>
 
   <div class="row">
+    <div id="3" class="col-4 col-sm-4 col-md-4 col-lg-4 box"> </div>
     <div id="4" class="col-4 col-sm-4 col-md-4 col-lg-4 box"> </div>
     <div id="5" class="col-4 col-sm-4 col-md-4 col-lg-4 box"> </div>
-    <div id="6" class="col-4 col-sm-4 col-md-4 col-lg-4 box"> </div>
   </div>
 
   <div class="row">
+    <div id="6" class="col-4 col-sm-4 col-md-4 col-lg-4 box"> </div>
     <div id="7" class="col-4 col-sm-4 col-md-4 col-lg-4 box"> </div>
     <div id="8" class="col-4 col-sm-4 col-md-4 col-lg-4 box"> </div>
-    <div id="9" class="col-4 col-sm-4 col-md-4 col-lg-4 box"> </div>
   </div>
 </div>
-</section>
+</div>
 
 </body>
 

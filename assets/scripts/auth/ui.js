@@ -1,5 +1,5 @@
 'use strict'
-const store = require('./store.js')
+const store = require('../store.js')
 
 // **** LOGIN UI *****
 

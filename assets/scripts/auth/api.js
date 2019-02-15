@@ -1,6 +1,6 @@
 'use strict'
-const config = require('./config.js')
-const store = require('./store.js')
+const config = require('../config.js')
+const store = require('../store.js')
 
 // ***** LOGIN API INFO ******
 const signUp = (formData) => {
