@@ -10,7 +10,11 @@ $white: #fff;
   border: 2px solid $white;
   color: $body-text-color;
   display: flex;
-  height: 350px;
-  width: 350px;
+  height: 200px;
+  width: 100%;
   justify-content: center;
+}
+
+.container {
+  color: black;
 }

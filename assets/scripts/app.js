@@ -7,5 +7,9 @@ const events = require('./events.js')
 // require('./example')
 
 $(() => {
-  $('#on-clicks').on('click', events.createClicks)
+  $('#sign-up-form').on('submit', events.onSignUp)
+  $('#sign-in-form').on('submit', events.onSignIn)
+  $('#change-password-form').on('submit', events.onChangePassword)
+  $('#sign-out-form').on('submit', events.onSignOut)
+  // $('#board').on('click', events.createClicks)
 })
