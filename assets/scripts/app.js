@@ -16,5 +16,5 @@ $(() => {
   $('#sign-out-form').on('submit', authEvents.onSignOut)
   $('#get-games').on('click', gameEvents.onGetGames)
   $('#create-games').on('click', gameEvents.onCreateGames)
-  // $('.box').on('click', gameLogic.playerTurn)
+  // $('.box').on('click', )
 })

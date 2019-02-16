@@ -1,7 +1,12 @@
-curl "https://tic-tac-toe-wdi.herokuapp.com/create-games" \
+curl "https://tic-tac-toe-wdi.herokuapp.com/games" \
 --include \
---request GET \
+--request POST \
 --header "Content-Type: application/json" \
---header "Authorization: Token token=${TOKEN}"
+--header "Authorization: Token token=${TOKEN}" \
+--data '{
+    "example": {
+      "text": "'"${TEXT}"'"
+    }
+  }'
 
 echo

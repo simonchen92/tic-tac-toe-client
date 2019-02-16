@@ -1,26 +1,22 @@
 'use strict'
-const getFormFields = require('../../../lib/get-form-fields.js')
+// const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
 const onGetGames = (event) => {
-  console.log('onGetGames')
+  console.log('onGetGames Success')
   event.preventDefault()
-  const form = event.target
-  const formData = getFormFields(form)
 
-  api.getGames(formData)
+  api.getGames()
     .then(ui.onGetGamesSuccess)
     .catch(ui.failure)
 }
 
 const onCreateGames = (event) => {
-  console.log('onCreateGames')
+  console.log('onCreateGames Success')
   event.preventDefault()
-  const form = event.target
-  const formData = getFormFields(form)
 
-  api.getGames(formData)
+  api.getGames()
     .then(ui.onCreateGamesSuccess)
     .catch(ui.failure)
 }

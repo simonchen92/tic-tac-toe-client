@@ -18,8 +18,8 @@ const getGames = (formData) => {
 const createGames = (formData) => {
   console.log('createGames')
   return $.ajax({
-    method: 'GET',
-    url: config.apiUrl + '/create-games',
+    method: 'POST',
+    url: config.apiUrl + '/games',
     headers: {
       Authorization: `Token token=${store.user.token}`
     },

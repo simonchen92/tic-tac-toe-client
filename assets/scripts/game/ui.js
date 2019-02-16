@@ -1,22 +1,22 @@
 'use strict'
 // const store = require('../store.js')
 
-const onGetGamesSuccess = (gameSuccess) => {
-  console.log('onGetGamesSuccess')
-  $('#message').text(`Total games played: ${gameSuccess.games.length}`)
+const onGetGamesSuccess = (event) => {
+  console.log('onGetGamesSuccess Success')
+  $('#message').text(`Total games played: ${event.games.length}`)
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
 }
 
-const onCreateGamesSuccess = (gameSuccess) => {
-  console.log('onCreateGamesSuccess')
+const onCreateGamesSuccess = (event) => {
+  console.log('onCreateGamesSuccess Sucess')
   $('#message').text('YOU SUCESSFULLY STARTED A NEW GAME!!!')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
 }
 
 const failure = () => {
-  $('#message').text('Something went wrong! Try again!')
+  $('#message').text('Sorry!! Please try again!!')
   $('#message').removeClass('success-message')
   $('#message').addClass('error-message')
 }
