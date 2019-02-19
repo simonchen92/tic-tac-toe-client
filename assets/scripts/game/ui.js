@@ -17,6 +17,8 @@ const onCreateGameSuccess = (createGame) => {
   store.cells = createGame.game.cells
   store.player = 'X'
   $('#message').text('YOU SUCESSFULLY STARTED A NEW GAME!!!')
+  $('#message').addClass('success-message')
+  $('#message').removeClass('error-message')
   // below function empty all elements it is being called on
   $('.box').empty()
   // console.log('box .empty() works!!')

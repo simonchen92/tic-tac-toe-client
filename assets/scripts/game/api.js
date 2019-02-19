@@ -31,7 +31,7 @@ const createGame = (formData) => {
 const updateGame = (index, value, over) => {
   console.log('updateGame Success')
   return $.ajax({
-    method: 'POST',
+    method: 'PATCH',
     url: config.apiUrl + `games/${store.game}`,
     headers: {
       Authorization: `Token token=${store.user.token}`

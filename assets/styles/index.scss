@@ -3,6 +3,31 @@
 $body-bg-color: #ed7e7e;
 $body-text-color: #e5e5e5;
 $white: #fff;
+// make background color light gray
+
+
+.auth-forms {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  #sign-up-form {
+    display: none;
+    margin: 0 auto;
+  }
+    #sign-in-form {
+      display: none;
+      margin: 0 auto;
+    }
+    #change-password-form {
+        display: none;
+        margin: 0 auto;
+    }
+}
+
+.container {
+  display: none;
+  margin: 150px auto;
+}
 
 .box {
   align-items: center;
@@ -11,6 +36,53 @@ $white: #fff;
   color: $body-text-color;
   display: flex;
   height: 200px;
+  justify-content: center;
   width: 100%;
+}
+
+.game-buttons {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  #get-games {
+    display: none;
+    margin: 10px auto;
+  }
+  #create-games {
+    display: none;
+    margin: 0 auto;
+  }
+}
+
+.game-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.navbar {
+  color: $white;
+}
+
+.turn {
+  text-align: center;
+}
+
+#change-password-btn {
+  display: none;
+  margin: 0 auto;
+}
+
+#sign-out-btn {
+  display: none;
+  margin: 0 auto;
+}
+
+#user-message {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
