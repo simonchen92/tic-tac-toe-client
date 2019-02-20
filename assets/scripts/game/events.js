@@ -32,6 +32,15 @@ const onUpdateGame = (event) => {
   const id = $(event.target).data().cellIndex
   const player = store.player
   const over = store.over
+
+  // Chuck & Matt found a bug where if O won, and empty space was clicked
+
+  if (store.over) {
+    $('#message').html('Game is Over! Please Start a New Game!')
+    $('#message').addClass('error-message')
+    $('#message').removeClass('success-message')
+    return
+  }
   // console.log('this is storing id & player' + id, player)
   // console.log('this is storing store' + store)
 

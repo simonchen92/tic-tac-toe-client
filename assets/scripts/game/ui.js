@@ -20,8 +20,8 @@ const onCreateGameSuccess = (createGame) => {
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
   // below function clears the successful game message
+  setTimeout(() => $('#message-content').text(''), 1000)
   setTimeout(() => $('#message').text(''), 2000)
-  setTimeout(() => $('#message-content').text(''), 2000)
   // below function empty all elements it is being called on
   $('.box').empty()
   // console.log('box .empty() works!!')
