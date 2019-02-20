@@ -16,13 +16,20 @@ const onCreateGameSuccess = (createGame) => {
   store.over = createGame.game.over
   store.cells = createGame.game.cells
   store.player = 'X'
-  $('#message').text('YOU SUCESSFULLY STARTED A NEW GAME!!!')
+  $('#message').text('New Game Successful')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
+  // below function clears the successful game message
+  setTimeout(() => $('#message').text(''), 2000)
+  setTimeout(() => $('#message-content').text(''), 2000)
   // below function empty all elements it is being called on
   $('.box').empty()
   // console.log('box .empty() works!!')
-  // Would need to reset the player turn message as well
+  // need to store the start of the player's Turn
+  $('#player-turn').html(`Player: ${store.player}'s Turn`)
+  // $('.container').height('60vh')
+  $('.container').show()
+  $('.box').height($('.box').width())
 }
 
 const onUpdateGameSuccess = (id) => {
@@ -37,7 +44,10 @@ const onUpdateGameSuccess = (id) => {
 }
 
 const failure = () => {
-  $('#message').text('Sorry!! Please try again!!')
+  $('#message').text('Something went wrong! Please try again!')
+  $('#message').addClass('error-message')
+  $('#message').removeClass('success-message')
+  setTimeout(() => $('#message').text(''), 1000)
 }
 
 module.exports = {

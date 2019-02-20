@@ -41,7 +41,8 @@ const gameBoard = (id, value, over) => {
     // if space not empty then store the value as a misclick
     // will alert the user that they have misclicked
   } else if (store.cells[id] === 'X' || 'O') {
-    $('#message').html('STOP! YOU CANNOT CLICK THAT SPACE!')
+    $('#message').html('Sorry! Please select another space!')
+    setTimeout(() => $('#message').text(''), 1000)
     store.click = 'misclick'
   }
 }

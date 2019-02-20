@@ -8,7 +8,7 @@ const signUpSucess = () => {
   $('#user-message').addClass('success-message')
   $('#user-message').removeClass('error-message')
   $('#sign-up-form').trigger('reset')
-  setTimeout(() => $('#user-message').text(''), 3000)
+  setTimeout(() => $('#user-message').text(''), 2000)
   $('#change-password-form').removeClass('hidden')
   $('#sign-up-form').addClass('hidden')
   $('#sign-up-form').fadeOut('slow')
@@ -28,7 +28,7 @@ const signInSucess = (responseData) => {
   store.user = responseData.user
   console.log(store.user)
   $('#sign-in-form').trigger('reset')
-  setTimeout(() => $('#user-message').text(''), 3000)
+  setTimeout(() => $('#user-message').text(''), 2000)
   $('#change-password-form').removeClass('hidden')
   $('#sign-out-form').removeClass('hidden')
   $('#sign-up-form').addClass('hidden')
@@ -39,7 +39,7 @@ const signInSucess = (responseData) => {
   $('#sign-out-btn').show()
   $('#sign-up-btn').hide()
   $('#sign-in-btn').hide()
-  $('.container').show()
+  $('.container').hide()
   $('#get-games').show()
   $('#create-games').show()
   $('.box').empty()
@@ -54,9 +54,9 @@ const signInFailure = () => {
 const changePasswordSucess = () => {
   $('#user-message').text('Change Password Success')
   $('#user-message').addClass('success-message')
-  $('#user-message').removeClass('error-message')
+  $('#message').removeClass('error-message')
   $('#change-password-form').trigger('reset')
-  setTimeout(() => $('#user-message').text(''), 3000)
+  setTimeout(() => $('#user-message').text(''), 2000)
   $('#change-password-form').fadeOut('slow')
   $('.box').empty()
 }
@@ -72,9 +72,8 @@ const signOutSuccess = () => {
   $('#user-message').addClass('success-message')
   $('#user-message').removeClass('error-message')
   store.user = null
-  setTimeout(() => $('#user-message').text(''), 3000)
+  setTimeout(() => $('#user-message').text(''), 2000)
   $('#change-password-forms').addClass('hidden')
-  $('#sign-out-btn').addClass('hidden')
   $('#sign-out-btn').hide()
   $('#change-password-btn').hide()
   $('#sign-up-form').removeClass('hidden')
@@ -85,14 +84,13 @@ const signOutSuccess = () => {
   // show buttons
   $('#sign-up-btn').show()
   $('#sign-in-btn').show()
-  $('.game-buttons').hide()
-  // $('#get-games').hide()
-  // $('#create-games').hide()
-  $('#gameboard').hide()
+  $('.container').hide()
+  $('#get-games').hide()
+  $('#create-games').hide()
   $('#user-message').empty()
   $('.game-message').empty()
   $('.box').trigger('reset')
-  setTimeout(() => $('#user-message').text(''), 3000)
+  setTimeout(() => $('#user-message').fadeOut().empty())
 }
 
 const signOutFailure = () => {

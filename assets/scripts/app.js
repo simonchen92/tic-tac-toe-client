@@ -17,6 +17,10 @@ $(() => {
   $('#get-games').on('click', gameEvents.onGetGames)
   $('#create-games').on('click', gameEvents.onCreateGame)
   $('.box').on('click', gameEvents.onUpdateGame)
+
+  // window.resize($('.box').height($('.row').height() / 3))
+  $(window).resize(() => $('.box').height($('.box').width()))
+  $(window).resize(() => $('.row').height($('.row').width()))
 })
 
 $('#gameboard').on('click', function () {
