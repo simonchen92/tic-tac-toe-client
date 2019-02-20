@@ -26,7 +26,7 @@ const signInSucess = (responseData) => {
   $('#user-message').removeClass('error-message')
   // save/store token ID
   store.user = responseData.user
-  console.log(store.user)
+  // console.log(store.user)
   $('#sign-in-form').trigger('reset')
   setTimeout(() => $('#user-message').text(''), 2000)
   $('#change-password-form').removeClass('hidden')

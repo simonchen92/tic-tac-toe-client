@@ -3,7 +3,7 @@ const config = require('../config.js')
 const store = require('../store.js')
 
 const getGames = (formData) => {
-  console.log('getGames was succesful')
+  // console.log('getGames was succesful')
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + 'games',
@@ -16,7 +16,7 @@ const getGames = (formData) => {
 }
 
 const createGame = (formData) => {
-  console.log('createGame was successful')
+  // console.log('createGame was successful')
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + 'games',
@@ -29,7 +29,7 @@ const createGame = (formData) => {
 }
 
 const updateGame = (index, value, over) => {
-  console.log('updateGame Success')
+  // console.log('updateGame Success')
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + `games/${store.game}`,

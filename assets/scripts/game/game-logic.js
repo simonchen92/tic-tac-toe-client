@@ -25,7 +25,7 @@ const store = require('../store.js')
 // create a game board that stores the values of clicks into cells
 // Game API project calls it a cell but it is basically the empty board/string
 const gameBoard = (id, value, over) => {
-  console.log('gameBoard success')
+  // console.log('gameBoard success')
   // if the game board space has already been clicked then end the function
   // Prevents the space to be clicked again
   // we use the over param here because the game api project states we should
@@ -48,7 +48,7 @@ const gameBoard = (id, value, over) => {
 }
 
 const currentPlayer = playerTurn => {
-  console.log('currentPlayer success')
+  // console.log('currentPlayer success')
   // if player selected a space that have value then do nothing
   if (store.click === 'misclick') {
     return
@@ -76,7 +76,7 @@ const waysToWin = gameboard => {
     store.over = true
     store.player = 'X'
     store.winner = 'X'
-    console.log('X WINS THE GAME!!')
+    // console.log('X WINS THE GAME!!')
     $('#message-content').html('X Wins the Game!!!')
     // pass the winning combos as O
   } else if ((gameboard[0] === 'O' && gameboard[1] === 'O' && gameboard[2] === 'O') ||
@@ -92,7 +92,7 @@ const waysToWin = gameboard => {
     store.player = 'X'
     // we store winner as O in this case since we want to see 'O' as the winner here
     store.winner = 'O'
-    console.log('O WINS THE GAME!!')
+    // console.log('O WINS THE GAME!!')
     $('#message-content').html('O Wins the Game!!!')
   } else if (gameboard[0] !== '' && gameboard[1] !== '' && gameboard[2] !== '' &&
     gameboard[3] !== '' && gameboard[4] !== '' && gameboard[5] !== '' &&
@@ -102,7 +102,7 @@ const waysToWin = gameboard => {
     store.over = true
     store.player = 'X'
     store.winner = 'Tie'
-    console.log('It is a TIE!!')
+    // console.log('It is a TIE!!')
     $('#message-content').html('It is a Tie Game!!!')
   }
 }

@@ -2,14 +2,14 @@
 const store = require('../store.js')
 
 const onGetGamesSuccess = (event) => {
-  console.log('onGetGamesSuccess Success')
+  // console.log('onGetGamesSuccess Success')
   $('#message').text(`Total games played: ${event.games.length}`)
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
 }
 
 const onCreateGameSuccess = (createGame) => {
-  console.log('onCreateGamesSuccess Sucess')
+  // console.log('onCreateGamesSuccess Sucess')
   // we want to create an id to a game everytime it is created
   store.game = createGame.game.id
   store.games = createGame
@@ -33,7 +33,7 @@ const onCreateGameSuccess = (createGame) => {
 }
 
 const onUpdateGameSuccess = (id) => {
-  console.log('update game success function is working')
+  // console.log('update game success function is working')
   // the below function is saying that if either player 'X' or 'O' clicks on an
   // empty box and if the game is not over then target that event and label it 'X' or 'O'
   if (store.player === 'X' && store.over === false && store.cells[id] === '') {
