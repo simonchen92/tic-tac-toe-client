@@ -20,7 +20,7 @@ const signIn = (formData) => {
 }
 
 const changePassword = (formData) => {
-  console.log('api/changePassword')
+  console.log('api changePassword is a success')
   return $.ajax({
     url: config.apiUrl + 'change-password',
     method: 'PATCH',

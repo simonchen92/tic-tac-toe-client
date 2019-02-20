@@ -9,7 +9,7 @@ const store = require('../store.js')
 // [6, 7, 8]
 
 // Winning Combinations
-// const row1 = [0, 1, 2]
+// const row1 = ([0], [1], [2]) // this might work....try later
 // const row2 = [3, 4, 5]
 // const row3 = [6, 7, 8]
 // const column1 = [0, 3, 6]

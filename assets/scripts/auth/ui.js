@@ -51,20 +51,19 @@ const signInFailure = () => {
   setTimeout(() => $('#user-message').text(''), 3000)
 }
 
-const changePasswordSucess = () => {
-  $('#user-message').text('Change Password Success')
-  $('#user-message').addClass('success-message')
-  $('#message').removeClass('error-message')
+const changePasswordSuccess = () => {
+  $('#alert-message').text('Change Password Success')
+  $('#alert-message').addClass('success-message')
+  $('#alert-message').removeClass('error-message')
   $('#change-password-form').trigger('reset')
-  setTimeout(() => $('#user-message').text(''), 2000)
-  $('#change-password-form').fadeOut('slow')
+  setTimeout(() => $('#alert-message').text(''), 2000)
   $('.box').empty()
 }
 
 const changePasswordFailure = () => {
-  $('#user-message').text('Password Change Unsuccessful. Please Try Again')
+  $('#alert-message').text('Password Change Unsuccessful. Please Try Again')
   $('#change-password-form').trigger('reset')
-  setTimeout(() => $('#user-message').text(''), 3000)
+  setTimeout(() => $('#alert-message').text(''), 2000)
 }
 
 const signOutSuccess = () => {
@@ -95,6 +94,8 @@ const signOutSuccess = () => {
 
 const signOutFailure = () => {
   $('#user-message').text('Error on Sign Out...Something went wrong')
+  $('#user-message').addClass('success-message')
+  $('#user-message').removeClass('error-message')
 }
 
 // ****** END OF LOGIN UI ******
@@ -104,7 +105,7 @@ module.exports = {
   signUpFailure,
   signInSucess,
   signInFailure,
-  changePasswordSucess,
+  changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
   signOutFailure
