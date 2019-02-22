@@ -78,6 +78,7 @@ const waysToWin = gameboard => {
     store.winner = 'X'
     // console.log('X WINS THE GAME!!')
     $('#message-content').html('X Wins the Game!!!')
+    if (store.over) { $('#player-turn').html('') }
     // pass the winning combos as O
   } else if ((gameboard[0] === 'O' && gameboard[1] === 'O' && gameboard[2] === 'O') ||
     (gameboard[3] === 'O' && gameboard[4] === 'O' && gameboard[5] === 'O') ||
@@ -94,6 +95,7 @@ const waysToWin = gameboard => {
     store.winner = 'O'
     // console.log('O WINS THE GAME!!')
     $('#message-content').html('O Wins the Game!!!')
+    if (store.over) { $('#player-turn').html('') }
   } else if (gameboard[0] !== '' && gameboard[1] !== '' && gameboard[2] !== '' &&
     gameboard[3] !== '' && gameboard[4] !== '' && gameboard[5] !== '' &&
     gameboard[6] !== '' && gameboard[7] !== '' && gameboard[8] !== '') {
@@ -104,6 +106,7 @@ const waysToWin = gameboard => {
     store.winner = 'Tie'
     // console.log('It is a TIE!!')
     $('#message-content').html('It is a Tie Game!!!')
+    if (store.over) { $('#player-turn').html('') }
   }
 }
 
