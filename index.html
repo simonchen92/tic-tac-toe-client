@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Simon's Tic Tac Toe Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+  <nav class="navbar navbar-dark bg-dark" id="navbar">
+    <a class="navbar-brand">Tic Tac Toe</a>
+    <form>
+      <button id="sign-up-btn" type="button" class="btn btn-secondary">Sign Up</button>
+      <button id="sign-in-btn" type="button" class="btn btn-secondary">Sign In</button>
+      <button id="change-password-btn" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#changePasswordModal">Change Password</button>
+      <button id="sign-out-btn" type="button" class="btn btn-secondary">Sign Out</button>
+    </form>
+  </nav>
+
+
+  <!-- Login Header -->
+  <div id="page">
+    <header>
+      <p id="user-message"></p>
+
+      <div class="auth-forms" id="auth-forms">
+
+        <form id="sign-up-form">
+          <div class="form-group">
+            <label for="formGroupSignIn">Create Your Account</label>
+            <input class="form-control" name="credentials[email]" type="email" placeholder="Email">
+            <input class="form-control" name="credentials[password]" type="password" placeholder="Password">
+            <input class="form-control" name="credentials[password_confirmation]" type="password" placeholder="Password Confirm">
+            <br>
+            <input id="button" type="submit" value="Sign Up">
+          </div>
+        </form>
+
+        <form id="sign-in-form">
+          <div class="form-group">
+            <label for="formGroupSignIn">Sign In Credentials</label>
+            <input class="form-control overflow-hidden" name="credentials[email]" type="email" placeholder="Email">
+            <input class="form-control" name="credentials[password]" type="password" placeholder="Password">
+            <br>
+            <input id="button1" type="submit" value="Sign In">
+          </div>
+        </form>
+
+        <!-- Change Password Modal -->
+        <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="changePasswordModal" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="changePasswordModalTitle">Change Password</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="change-password-form" class="hidden">
+                  <input name="passwords[old]" type="password" placeholder="Old Password">
+                  <input name="passwords[new]" type="password" placeholder="New Password">
+                  <input id="button2" class="btn btn-primary" type="submit" value="Submit">
+                  <br>
+                  <div id="alert-message"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <!-- bootstrap took care of the button and will be using an event listener to make
+it so that when we click on sign out it will work
+
+      <form id="sign-out-form" class="hidden">
+        <h6>Sign Out</h6>
+        <input id="button3" type="submit" value="SIGN OUT">
+      </form>  -->
+
+      </div>
+
+    </header>
+
+    <!-- Tic Tac Toe Grid Layout -->
+
+    <div class="container">
+      <div class="gameboard">
+
+        <section class="d-flex flex-column justify-content-center">
+          <h2 id="player-turn" class="turn">Player Turn: </h2>
+        </section>
+
+        <div class="container d-flex justify-content-center">
+          <div class="row">
+            <div id="0" class="col-4 box board" data-cell-index="0"></div>
+            <div id="1" class="col-4 box board" data-cell-index="1"></div>
+            <div id="2" class="col-4 box board" data-cell-index="2"></div>
+            <div id="3" class="col-4 box board" data-cell-index="3"></div>
+            <div id="4" class="col-4 box board" data-cell-index="4"></div>
+            <div id="5" class="col-4 box board" data-cell-index="5"></div>
+            <div id="6" class="col-4 box board" data-cell-index="6"></div>
+            <div id="7" class="col-4 box board" data-cell-index="7"></div>
+            <div id="8" class="col-4 box board" data-cell-index="8"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="game-buttons">
+      <button id="get-games">Get Total Game(s) Played</button>
+      <button id="create-games">Start New Game</button>
+    </div>
+
+    <div class="game-message">
+      <div id="message"></div>
+      <div id="message-content"></div>
+    </div>
+  </div>
+</body>
+
+</html>
