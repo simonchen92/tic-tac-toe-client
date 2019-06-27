@@ -3,12 +3,11 @@
 ## List of Technologies Used
 
 * HTML
-* CSS
+* SCSS (Sass)
 * JavaScript
 * jQuery
 * AJAX
 * Bootstrap
-* SCSS (Sass)
 * API
 
 ## User Stories and Wireframe
